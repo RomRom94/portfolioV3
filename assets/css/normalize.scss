@@ -1,7 +1,6 @@
 $legacy_browser_support: false !default;
 
 html {
-  font-family: sans-serif; /* 1 */
   -ms-text-size-adjust: 100%; /* 2 */
   -webkit-text-size-adjust: 100%; /* 2 */
   @if $legacy_browser_support {
@@ -9,8 +8,14 @@ html {
   }
 }
 
-body {
+body,
+ul,
+li,
+p,
+span,
+a {
   margin: 0;
+  padding: 0;
 }
 
 article,
@@ -35,6 +40,10 @@ a {
   &:active, &:hover {
     outline: 0;
   };
+}
+
+ul {
+  list-style: none;
 }
 
 h1 {
