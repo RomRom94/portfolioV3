@@ -36,6 +36,8 @@ summary {
 
 a {
   background-color: transparent;
+  text-decoration: none;
+  color: $black;
 
   &:active, &:hover {
     outline: 0;
@@ -79,7 +81,7 @@ h1 {
 }
 
 img {
-
+  display: block;
   border: 0;
   @if $legacy_browser_support {
     *-ms-interpolation-mode: bicubic; /* 2 */

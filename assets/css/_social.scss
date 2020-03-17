@@ -1,0 +1,40 @@
+.social {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+
+    & ul {
+        display: flex;
+        transform: rotate(-90deg);
+        margin-left: -65px;
+
+        & li {
+            margin-right: 30px;
+            & a {
+                &.facebook{
+                    display: block;
+                    width: 20px;
+                    height: 20px;
+                    background: url(../images/facebook.svg);
+                    background-size: cover;
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    transform: rotate(90deg);
+                }
+                &.linkedin{
+                    display: block;
+                    width: 20px;
+                    height: 20px;
+                    background: url(../images/linkedin.svg);
+                    background-size: cover;
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    transform: rotate(90deg);
+                }
+            }
+        }
+    }
+}

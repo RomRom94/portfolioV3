@@ -1,7 +1,18 @@
-@import './normalize.scss';
 @import './fonts.scss';
 @import './variables.scss';
+@import './normalize.scss';
+
+@import './header';
+@import './homepage';
+@import './social';
 
 body {
     font-family: $montserrat;
+
+    & .page-container {
+        position: relative;
+        width: 90%;
+        margin: 0 auto;
+        padding-top: 10px;
+    } 
 }
