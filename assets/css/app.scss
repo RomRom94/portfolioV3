@@ -1,4 +1,7 @@
-body {
-    background-color: lightgray;
-}
+@import './normalize.scss';
+@import './fonts.scss';
+@import './variables.scss';
 
+html {
+    font-family: $montserrat;
+}
