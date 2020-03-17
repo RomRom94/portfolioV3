@@ -19,6 +19,9 @@ Encore
         { from: './assets/fonts', to: 'fonts' }
     ]))
 
+    .copyFiles({
+        from: './assets/images',
+    })
     /*
      * ENTRY CONFIG
      *
