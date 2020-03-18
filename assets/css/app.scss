@@ -5,6 +5,8 @@
 @import './header';
 @import './homepage';
 @import './social';
+@import './leftToRight';
+@import './experience';
 
 body {
     font-family: $montserrat;
@@ -14,5 +16,31 @@ body {
         width: 90%;
         margin: 0 auto;
         padding-top: 10px;
+
+        & .section-container {
+            width: 65%;
+            margin: 0 auto;
+
+            & .introduction {
+                max-width: 500px;
+                margin: 0 0 40px 0;
+                & h1 {
+                  font-size: 4em;
+                  font-weight: 400;
+                }
+
+                & h2 {
+                    font-size: 3em;
+                    font-weight: 400;
+                    text-decoration: underline;
+                }
+            
+                & p {
+                  font-size: 20px;
+                  font-weight: 300;
+                  line-height: 30px;
+                }
+            }
+        }
     } 
 }

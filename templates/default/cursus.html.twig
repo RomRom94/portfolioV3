@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="cursus">
+        <div class="introduction">
+            <h2>Cursus</h2>
+            <p>
+                Here is my academic background that led me to web development. I had the chance to reorient myself to finally find my way. 
+            </p>
+        </div>
+        <div class="left-to-right">
+            <a href="http://www.lamartinieremonplaisir.org/index.php/je-veux-entrer-en-licence-professionnelle/120-bac-sti-genie-civil">
+                <div>
+                    <img src="{{ asset('build/gate.jpg') }}" alt="Gate">
+                    <h3>
+                        Bachelor's degree in industrial sciences and technologies, specializing in civil engineering
+                    </h3>
+                </div>
+            </a>
+            <a href="https://diplomeo.com/trouver-bts-muc">
+                <div>
+                    <img src="{{ asset('build/coins.jpg') }}" alt="Coins">
+                    <h3>
+                        BBTEC Higher National Diploma in business unit management
+                    </h3>
+                </div>
+            </a>
+            <a href="https://www.ecv.fr/digital/formations/bachelor-chef-de-projet-digital/">
+                <div>
+                    <img src="{{ asset('build/project.jpeg') }}" alt="Project">
+                    <h3>
+                        Bachelor Project Manager Digital
+                    </h3>
+                </div>
+            </a>
+            <a href="https://www.ecv.fr/digital/formations/mastere-developpement-web/">
+                <div>
+                    <img src="{{ asset('build/code.jpg') }}" alt="Code">
+                    <h3>
+                        Master's Degree in Web Development
+                    </h3>
+                </div>
+            </a>
+        </div>
+    </div>
+{% endblock %}

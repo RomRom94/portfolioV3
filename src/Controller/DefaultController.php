@@ -16,4 +16,24 @@ class DefaultController extends AbstractController
             'controller_name' => 'DefaultController',
         ]);
     }
+
+    /**
+     * @Route("/cursus", name="cursus")
+     */
+    public function cursus()
+    {
+        return $this->render('default/cursus.html.twig', [
+            'controller_name' => 'DefaultController',
+        ]);
+    }
+
+    /**
+     * @Route("/experiences", name="experiences")
+     */
+    public function experiences()
+    {
+        return $this->render('default/experiences.html.twig', [
+            'controller_name' => 'DefaultController',
+        ]);
+    }
 }

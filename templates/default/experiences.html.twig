@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="experiences">
+        <div class="introduction">
+            <h2>Experiences</h2>
+            <p>
+                I gather here my professional experiences related to web development since 2 years and a half.
+            </p>
+        </div>
+        <div class="experiences-list">
+            <div class="experience">
+                <img src="{{ asset('build/pushup2.jpg') }}" alt="Pushup">
+                <h4>6 months &mdash; <a href="https://www.facebook.com/agencepushup/">@Pushup Agency</a></h4>
+                <div class="experience-resume">
+                    <h5>Tasks</h5>
+                    <ul>
+                        <li>Html/css integration</li>
+                        <li>Initiation PHP</li>
+                        <li>Use of design software</li>
+                    </ul>
+                    <h5>Technologies</h5>
+                </div>
+            </div>
+            <div class="experience">
+                <img src="{{ asset('build/opsone2.jpeg') }}" alt="Pushup">
+                <h4>Current job since 2 years &mdash; <a href="https://www.opsone.net/">@Opsone</a></h4>
+                <div class="experience-resume">
+                    <h5>Tasks</h5>
+                    <ul>
+                        <li>Html/css/js integration</li>
+                        <li>Dynamisation / back end with Symfony2 Framework</li>
+                        <li>Integration / Development for Wordpress'sites</li>
+                        <li>Front end redesign </li>
+                        <li>Use of design software</li>
+                    </ul>
+                    <h5>Technologies</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

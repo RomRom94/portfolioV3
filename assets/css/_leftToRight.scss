@@ -1,0 +1,33 @@
+.left-to-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    & a {
+        display: block;
+        margin-bottom: 40px;
+
+        & div {
+            display: flex;
+            align-items: center;
+
+            & img {
+                width: 50%;
+                border-radius: 30px;
+            }
+
+            & h3 {
+                width: 100%;
+                text-align: center;
+                font-weight: 400;
+                text-decoration: underline;
+            }
+        }
+
+        &:nth-of-type(2n) {
+            & div {
+                flex-direction: row-reverse;
+            }
+        }
+    }
+}
