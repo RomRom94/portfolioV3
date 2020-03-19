@@ -36,4 +36,14 @@ class DefaultController extends AbstractController
             'controller_name' => 'DefaultController',
         ]);
     }
+
+    /**
+     * @Route("/projects", name="projects")
+     */
+    public function projects()
+    {
+        return $this->render('default/projects.html.twig', [
+            'controller_name' => 'DefaultController',
+        ]);
+    }
 }

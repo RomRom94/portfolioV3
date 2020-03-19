@@ -4,6 +4,7 @@ Version 3 portfolio
 Commandes :
 
 symfony server:start
+yarn run encore dev --watch
 
 Images : 
 <!-- <img src="{{ asset('build/logo.jpg') }}" alt="ACME logo"> -->
