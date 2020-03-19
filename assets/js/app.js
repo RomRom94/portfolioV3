@@ -7,8 +7,11 @@
 
 // any CSS you import will output into a single css file (app.css in this case)
 import '../css/app.scss';
+const $ = require('jquery');
+const slick = require('slick-carousel');
 
-// Need jQuery? Install it with "yarn add jquery", then uncomment to import it.
-// import $ from 'jquery';
+$(document).ready(function() {
+    console.log('Hello Webpack Encore! Edit me in assets/js/app.js');
+    $('.element').slick();
+});
 
-console.log('Hello Webpack Encore! Edit me in assets/js/app.js');
