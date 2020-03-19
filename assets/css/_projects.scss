@@ -1,4 +1,33 @@
 .projects-container {
+    position: relative;
+
+    & .prev-arrow {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(-60px, -50%) rotate(-180deg);
+        width: 40px;
+        height: 40px;
+        background: url(../images/right.svg);
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+
+    & .next-arrow {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translate(60px, -50%);
+        width: 40px;
+        height: 40px;
+        background: url(../images/right.svg);
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
     & .projects-slider {
         & .project {
             position: relative;
@@ -14,10 +43,14 @@
             }
     
             & h6 {
-                position: relative;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translate(20px, -50%);
+                z-index: 2;
+                margin: 0;
                 font-size: 2em;
                 color: #fff;
-                z-index: 2;
             }
         }
     }

@@ -11,7 +11,14 @@ const $ = require('jquery');
 const slick = require('slick-carousel');
 
 $(document).ready(function() {
-    console.log('Hello Webpack Encore! Edit me in assets/js/app.js');
-    $('.element').slick();
+    $('.projects-slider').slick({
+        infinite: true,
+        speed: 500,
+        fade: true,
+        arrows: true,
+        prevArrow: $('.prev-arrow'),
+        nextArrow: $('.next-arrow'),
+        cssEase: 'linear'
+    });
 });
 
