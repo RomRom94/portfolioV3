@@ -35,6 +35,27 @@
                     background-repeat: no-repeat;
                     transform: rotate(90deg);
                 }
+                &.mail {
+                    position: relative;
+                    font-family: $ogg;
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        top: 100%;
+                        left: 0;
+                        transform: translateY(2px);
+                        width: 70%;
+                        height: 1px;
+                        background-color: $black;
+                        transition: .4s;
+                    }
+
+                    &:hover {
+                        &:after {
+                        width: 100%;
+                        }
+                    }
+                }
             }
         }
     }

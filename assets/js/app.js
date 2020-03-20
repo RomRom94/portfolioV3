@@ -11,14 +11,28 @@ const $ = require('jquery');
 const slick = require('slick-carousel');
 
 $(document).ready(function() {
-    $('.projects-slider').slick({
-        infinite: true,
-        speed: 500,
-        fade: true,
-        arrows: true,
-        prevArrow: $('.prev-arrow'),
-        nextArrow: $('.next-arrow'),
-        cssEase: 'linear'
-    });
+    var slider = $(".projects-slider");
+    var scrollCount = null;
+    var scroll= null;
+
+    slider
+        .slick({
+            dots: true
+        });
+
+    slider.on('wheel', (function(e) {
+        e.preventDefault();
+
+        clearTimeout(scroll);
+        scroll = setTimeout(function(){scrollCount=0;}, 50);
+        if(scrollCount) return 0;
+        scrollCount=1;
+
+        if (e.originalEvent.deltaY < 0) {
+            $(this).slick('slickNext');
+        } else {
+            $(this).slick('slickPrev');
+        }
+    }));
 });
 

@@ -27,20 +27,41 @@ body {
                 max-width: 500px;
                 margin: 0 0 40px 0;
                 & h1 {
+                  font-family: $ogg;
                   font-size: 4em;
                   font-weight: 400;
                 }
-
                 & h2 {
+                    font-family: $ogg;
                     font-size: 3em;
                     font-weight: 400;
                     text-decoration: underline;
                 }
-            
                 & p {
                   font-size: 20px;
                   font-weight: 300;
                   line-height: 30px;
+                }
+
+                & a {
+                    position: relative;
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        top: 100%;
+                        left: 0;
+                        transform: translateY(2px);
+                        width: 70%;
+                        height: 1px;
+                        background-color: $black;
+                        transition: .4s;
+                    }
+
+                    &:hover {
+                        &:after {
+                        width: 100%;
+                        }
+                    }
                 }
             }
         }

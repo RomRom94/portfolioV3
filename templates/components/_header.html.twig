@@ -3,16 +3,16 @@
     <a href="/" class="logo"></a>
     <ul>
       <li>
-        <a href="/">About</a>
+        <a href="/" {% if (path(app.request.attributes.get('_route')) == '/') %}class="active"{% endif %}>About</a>
       </li>
       <li>
-        <a href="/cursus">Cursus</a>
+        <a href="/cursus" {% if (path(app.request.attributes.get('_route')) == '/cursus') %}class="active"{% endif %}>Cursus</a>
       </li>
       <li>
-        <a href="/experiences">Experiences</a>
+        <a href="/experiences" {% if (path(app.request.attributes.get('_route')) == '/experiences') %}class="active"{% endif %}>Experiences</a>
       </li>
       <li>
-        <a href="/projects">Projects</a>
+        <a href="/projects" {% if (path(app.request.attributes.get('_route')) == '/projects') %}class="active"{% endif %}>Projects</a>
       </li>
     </ul>
   </nav>
