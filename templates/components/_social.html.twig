@@ -1,13 +1,15 @@
-<div class="social">
-    <ul>
-        <li>
-            <a href="https://www.linkedin.com/in/romain-ferjule-45a696151/" class="linkedin"></a>
-        </li>
-        <li>
-            <a href="https://www.facebook.com/romain.ferjule" class="facebook"></a>
-        </li>
-        <li>
-            <a href="mailto:ferjuleromain@gmail.com" class="mail">ferjuleromain@gmail.com</a>
-        </li>
-    </ul>
-</div>
+{% if (path(app.request.attributes.get('_route')) != '/projects') %}
+    <div class="social">
+        <ul>
+            <li>
+                <a href="https://www.linkedin.com/in/romain-ferjule-45a696151/" class="linkedin"></a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com/romain.ferjule" class="facebook"></a>
+            </li>
+            <li>
+                <a href="mailto:ferjuleromain@gmail.com" class="mail">ferjuleromain@gmail.com</a>
+            </li>
+        </ul>
+    </div>
+{% endif %}

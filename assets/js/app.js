@@ -14,10 +14,15 @@ $(document).ready(function() {
     var slider = $(".projects-slider");
     var scrollCount = null;
     var scroll= null;
+    var paging = $('.pagination');
 
     slider
         .slick({
-            dots: true
+            infinite: true,
+            arrows: false,
+            centerMode: true,
+            slidesToShow: 3,
+            slidesToScroll: 1
         });
 
     slider.on('wheel', (function(e) {
