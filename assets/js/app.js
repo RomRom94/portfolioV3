@@ -11,10 +11,12 @@ const $ = require('jquery');
 const slick = require('slick-carousel');
 
 $(document).ready(function() {
-    var slider = $(".projects-slider");
-    var scrollCount = null;
-    var scroll= null;
-    var paging = $('.pagination');
+
+    // SLIDER SECTION
+    let slider = $(".projects-slider");
+    let scrollCount = null;
+    let scroll= null;
+    let paging = $('.pagination');
 
     slider
         .slick({
@@ -39,5 +41,31 @@ $(document).ready(function() {
             $(this).slick('slickPrev');
         }
     }));
+
+    // EXPERIENCE TO HIDE SECTION
+
+    $('.experience h4').each(function() {
+        let blockToHide = $(this).next('.to-hide');
+        let arrow = $(this).find('.arrow');
+        $(this).on('click', function() {
+            if (blockToHide.hasClass('hide')) {
+                arrow.addClass('open');
+                blockToHide.slideDown( 1000, function() {
+                    blockToHide.removeClass('hide');
+                });
+            } else {
+                arrow.removeClass('open');
+                blockToHide.slideUp( 1000, function() {
+                    blockToHide.addClass('hide');
+                });
+            }
+        })
+    })
+
+    // LEFT TO RIGHT INIT
+
+        $('.left-to-right a').each(function() {
+            $(this).addClass('init');
+        })
 });
 
