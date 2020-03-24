@@ -10,14 +10,30 @@
         </div>
         <div class="left-to-right">
             <a href="http://www.lamartinieremonplaisir.org/index.php/je-veux-entrer-en-licence-professionnelle/120-bac-sti-genie-civil">
-                <div>
-                    <img src="{{ asset('build/gate.jpg') }}" alt="Gate">
-                    <h3>
-                        Bachelor's degree in industrial sciences and technologies, specializing in civil engineering
+                <div class="diplome">
+                    <div class="image-animation">
+                        <div class="overlay1"></div>
+                        <div class="overlay2"></div>
+                        <img src="{{ asset('build/gate.jpg') }}" alt="Gate">
+                    </div>
+                    <div class="text-animation">
+                        <div class="text1">
+                            <div class="overlay1"></div>
+                            <div class="overlay2"></div>
+                            Bachelor's degree in industrial sciences and technologies
+                        </div>
+                        {# <div class="text2">
+                            <div class="overlay1"></div>
+                            <div class="overlay2"></div>
+                            specializing in civil engineering
+                        </div> #}
+                    </div>
                     </h3>
+                    </div>
+                    
                 </div>
             </a>
-            <a href="https://diplomeo.com/trouver-bts-muc">
+            {# <a href="https://diplomeo.com/trouver-bts-muc">
                 <div>
                     <img src="{{ asset('build/coins.jpg') }}" alt="Coins">
                     <h3>
@@ -40,7 +56,7 @@
                         Master's Degree in Web Development
                     </h3>
                 </div>
-            </a>
+            </a> #}
         </div>
     </div>
 {% endblock %}

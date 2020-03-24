@@ -62,10 +62,14 @@ $(document).ready(function() {
         })
     })
 
-    // LEFT TO RIGHT INIT
+    // IMAGE ANIMATION
 
-        $('.left-to-right a').each(function() {
-            $(this).addClass('init');
-        })
+    $('.image-animation').each(function() {
+        $(this).addClass('show')
+    })
+
+    $('.text-animation').each(function() {
+        $(this).addClass('show')
+    })
 });
 

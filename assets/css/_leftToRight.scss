@@ -5,33 +5,126 @@
 
     & a {
         position: relative;
-        opacity: .1;
-        left: 0;
-        transform: translateX(-200px);
         display: block;
         margin-bottom: 40px;
-        transition: 1s ease-out;
 
-        &.init {
-            transform: translateX(0px);
-            opacity: 1;
-        }
-
-        & div {
+        & .diplome {
             display: flex;
             align-items: center;
 
-            & img {
-                width: 50%;
-                border-radius: 30px;
+            & .image-animation {
+                position: relative;
+                width: 60%;
+                overflow: hidden;
+
+                & .overlay1 {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    transform: translateX(100%);
+                    width: 200%;
+                    height: 100%;
+                    background-color: $black;
+                    z-index: 3;
+                    transition-delay: 0s;
+                    transition-duration: 3s;
+                }
+                & .overlay2 {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: #fff;
+                    z-index: 2;
+                    transition-delay: .6s;
+                    transition-duration: .1s;
+                }
+
+                & .img {
+                    position: relative;
+                    display: block;
+                    z-index: 1;
+                }
+
+                &.show {
+                    & .overlay1{
+                        transform: translateX(-200%);
+                    }
+                    & .overlay2{
+                        transform: translateX(-100%);
+                    }
+                }
             }
 
-            & h3 {
-                width: 100%;
-                text-align: center;
-                font-weight: 400;
-                text-decoration: underline;
-                font-family: $ogg;
+            & .text-animation {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 60%;
+
+                & .text1,
+                & .text2 {
+                    font-weight: 400;
+                    text-decoration: underline;
+                    font-family: $ogg;
+                    text-align: center;
+                    font-size: 2em;
+                    line-height: 1.2;
+                }
+
+                & .text1{
+                    & .overlay1 {
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        transform: translateX(100%);
+                        width: 200%;
+                        height: 100%;
+                        background-color: $black;
+                        z-index: 3;
+                        transition-delay: 0s;
+                        transition-duration: 3s;
+                    }
+                    & .overlay2 {
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-color: #fff;
+                        z-index: 2;
+                        transition-delay: .6s;
+                        transition-duration: .1s;
+                    }
+                }
+
+                // & .text2{
+                //     & .overlay1 {
+                //         position: absolute;
+                //         left: 0;
+                //         top: 0;
+                //         transform: translateX(100%);
+                //         width: 200%;
+                //         height: 100%;
+                //         background-color: $black;
+                //         z-index: 3;
+                //         transition-delay: 0s;
+                //         transition-duration: 3s;
+                //     }
+                //     & .overlay2 {
+                //         position: absolute;
+                //         left: 0;
+                //         top: 0;
+                //         width: 100%;
+                //         height: 100%;
+                //         background-color: #fff;
+                //         z-index: 2;
+                //         transition-delay: .6s;
+                //         transition-duration: .1s;
+                //     }
+                // }
             }
         }
 
