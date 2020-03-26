@@ -4,44 +4,6 @@
     transform: translateX(-50%);
     width: 100vw;
 
-    .scroll {
-        width: 50px;
-        height: 50px;
-        margin: 0 auto 10px auto;
-
-        svg {
-            & .arrow-down {
-                animation: arrow 2s infinite;
-                -webkit-animation: arrow 2s infinite;
-
-                &.a1 {
-                    animation-delay:-1s;
-                    -webkit-animation-delay:-1s; /* Safari 和 Chrome */
-                }
-    
-                &.a2 {
-                    animation-delay:-0.5s;
-                    -webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
-                }
-            }
-            @keyframes arrow
-            {
-            0% {opacity:0}
-            40% {opacity:1}
-            80% {opacity:0}
-            100% {opacity:0}
-            }
-
-            @-webkit-keyframes arrow /*Safari and Chrome*/
-            {
-            0% {opacity:0}
-            40% {opacity:1}
-            80% {opacity:0}
-            100% {opacity:0}
-            }
-        }
-    }
-
     .slick-slider {
         margin:0 -15px;
     }

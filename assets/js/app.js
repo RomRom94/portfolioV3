@@ -62,14 +62,39 @@ $(document).ready(function() {
         })
     })
 
-    // IMAGE ANIMATION
+    // ON SCROLL ANIMATION PAGE CURSUS
 
-    $('.image-animation').each(function() {
-        $(this).addClass('show')
-    })
+    if ($('.cursus')) {
+        animate($('#1'))
+        let pos2 = $("#2")
+        let pos3 = $("#3")
+        let pos4 = $("#4")
 
-    $('.text-animation').each(function() {
-        $(this).addClass('show')
-    })
+        var windowHeight = $(window).height();
+
+        $(window).scroll(function(){
+            var viewBottom = $(this).scrollTop() + windowHeight;
+            if (viewBottom >= (pos2.offset().top + 50)) {
+                animate($('#2'))
+            }
+
+            if (viewBottom >= (pos3.offset().top + 50)) {
+                animate($('#3'))
+            }
+
+            if (viewBottom >= (pos4.offset().top + 50)) {
+                animate($('#4'))
+            }
+        });
+
+        function animate(element) {
+            element.find('.image-animation').each(function() {
+                $(this).addClass('show')
+            })
+            element.find('.text-animation').each(function() {
+                $(this).addClass('show')
+            })
+        }
+    }
 });
 

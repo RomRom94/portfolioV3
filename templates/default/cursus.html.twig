@@ -9,54 +9,87 @@
             </p>
         </div>
         <div class="left-to-right">
+            {% include './components/_scroll.html.twig' %}
             <a href="http://www.lamartinieremonplaisir.org/index.php/je-veux-entrer-en-licence-professionnelle/120-bac-sti-genie-civil">
-                <div class="diplome">
+                <div class="diplome" id="1">
                     <div class="image-animation">
                         <div class="overlay1"></div>
                         <div class="overlay2"></div>
+                        <div class="overlay3"></div>
                         <img src="{{ asset('build/gate.jpg') }}" alt="Gate">
                     </div>
                     <div class="text-animation">
                         <div class="text1">
                             <div class="overlay1"></div>
-                            <div class="overlay2"></div>
                             Bachelor's degree in industrial sciences and technologies
                         </div>
-                        {# <div class="text2">
+                        <div class="text2">
                             <div class="overlay1"></div>
-                            <div class="overlay2"></div>
                             specializing in civil engineering
-                        </div> #}
-                    </div>
-                    </h3>
-                    </div>
-                    
+                        </div>
+                    </div>             
                 </div>
             </a>
-            {# <a href="https://diplomeo.com/trouver-bts-muc">
-                <div>
-                    <img src="{{ asset('build/coins.jpg') }}" alt="Coins">
-                    <h3>
-                        BBTEC Higher National Diploma in business unit management
-                    </h3>
+            <a href="https://diplomeo.com/trouver-bts-muc">
+                <div class="diplome" id="2">
+                    <div class="image-animation">
+                        <div class="overlay1"></div>
+                        <div class="overlay2"></div>
+                        <div class="overlay3"></div>
+                        <img src="{{ asset('build/coins.jpg') }}" alt="Coins">
+                    </div>
+                    <div class="text-animation">
+                        <div class="text1">
+                            <div class="overlay1"></div>
+                            BBTEC Higher National Diploma
+                        </div>
+                        <div class="text2">
+                            <div class="overlay1"></div>
+                            in business unit management
+                        </div>
+                    </div>
                 </div>
             </a>
             <a href="https://www.ecv.fr/digital/formations/bachelor-chef-de-projet-digital/">
-                <div>
-                    <img src="{{ asset('build/project.jpeg') }}" alt="Project">
-                    <h3>
-                        Bachelor Project Manager Digital
-                    </h3>
+                <div class="diplome" id="3">
+                    <div class="image-animation">
+                        <div class="overlay1"></div>
+                        <div class="overlay2"></div>
+                        <div class="overlay3"></div>
+                        <img src="{{ asset('build/project.jpeg') }}" alt="Project">
+                    </div>
+                    <div class="text-animation">
+                        <div class="text1">
+                            <div class="overlay1"></div>
+                            Bachelor Project
+                        </div>
+                        <div class="text2">
+                            <div class="overlay1"></div>
+                            iManager Digital
+                        </div>
+                    </div>
                 </div>
             </a>
             <a href="https://www.ecv.fr/digital/formations/mastere-developpement-web/">
-                <div>
-                    <img src="{{ asset('build/code.jpg') }}" alt="Code">
-                    <h3>
-                        Master's Degree in Web Development
-                    </h3>
+                <div class="diplome" id="4">
+                    <div class="image-animation">
+                        <div class="overlay1"></div>
+                        <div class="overlay2"></div>
+                        <div class="overlay3"></div>
+                        <img src="{{ asset('build/code.jpg') }}" alt="Code">
+                    </div>
+                    <div class="text-animation">
+                        <div class="text1">
+                            <div class="overlay1"></div>
+                            Master's Degree 
+                        </div>
+                        <div class="text2">
+                            <div class="overlay1"></div>
+                            in Web Development
+                        </div>
+                    </div>
                 </div>
-            </a> #}
+            </a>
         </div>
     </div>
 {% endblock %}

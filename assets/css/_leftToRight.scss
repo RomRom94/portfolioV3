@@ -40,6 +40,18 @@
                     transition-delay: .6s;
                     transition-duration: .1s;
                 }
+                & .overlay3 {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: #fff;
+                    z-index: 2;
+                    opacity: .5;
+                    transition-delay: .6s;
+                    transition-duration: .1s;
+                }
 
                 & .img {
                     position: relative;
@@ -63,6 +75,8 @@
                 left: 50%;
                 transform: translate(-50%, -50%);
                 width: 60%;
+                overflow: hidden;
+                z-index: 6;
 
                 & .text1,
                 & .text2 {
@@ -75,6 +89,11 @@
                 }
 
                 & .text1{
+                    position: relative;
+                    color: transparent;
+                    transition-delay: 1s;
+                    transition-duration: .1s;
+
                     & .overlay1 {
                         position: absolute;
                         left: 0;
@@ -84,47 +103,45 @@
                         height: 100%;
                         background-color: $black;
                         z-index: 3;
-                        transition-delay: 0s;
-                        transition-duration: 3s;
-                    }
-                    & .overlay2 {
-                        position: absolute;
-                        left: 0;
-                        top: 0;
-                        width: 100%;
-                        height: 100%;
-                        background-color: #fff;
-                        z-index: 2;
-                        transition-delay: .6s;
-                        transition-duration: .1s;
+                        transition-delay: .2s;
+                        transition-duration: 4s;
                     }
                 }
 
-                // & .text2{
-                //     & .overlay1 {
-                //         position: absolute;
-                //         left: 0;
-                //         top: 0;
-                //         transform: translateX(100%);
-                //         width: 200%;
-                //         height: 100%;
-                //         background-color: $black;
-                //         z-index: 3;
-                //         transition-delay: 0s;
-                //         transition-duration: 3s;
-                //     }
-                //     & .overlay2 {
-                //         position: absolute;
-                //         left: 0;
-                //         top: 0;
-                //         width: 100%;
-                //         height: 100%;
-                //         background-color: #fff;
-                //         z-index: 2;
-                //         transition-delay: .6s;
-                //         transition-duration: .1s;
-                //     }
-                // }
+                & .text2{
+                    position: relative;
+                    color: transparent;
+                    transition-delay: 1.4s;
+                    transition-duration: .1s;
+                    & .overlay1 {
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        transform: translateX(100%);
+                        width: 200%;
+                        height: 100%;
+                        background-color: $black;
+                        z-index: 3;
+                        transition-delay: .3s;
+                        transition-duration: 4s;
+                    }
+                }
+
+                &.show {
+                    & .text1 {
+                        color: $black;
+                        & .overlay1 {
+                            transform: translateX(-200%);
+                        }
+                    }
+
+                    & .text2 {
+                        color: $black;
+                        & .overlay1 {
+                            transform: translateX(-200%);
+                        }
+                    }
+                }
             }
         }
 
@@ -132,12 +149,52 @@
             right: 0;
             transform: translateX(200px);
 
-            &.init {
-                transform: translateX(0px);
-                opacity: 1;
-            }
-            & div {
+            & .diplome {
                 flex-direction: row-reverse;
+
+                & .image-animation{
+                    & .overlay1 {
+                        transform: translateX(-100%);
+                    }
+
+                    &.show {
+                        & .overlay1{
+                            transform: translateX(200%);
+                        }
+                    }
+                }
+
+                & .text-animation {
+
+                    & .text1{
+    
+                        & .overlay1 {
+                            transform: translateX(-100%);
+                        }
+                    }
+    
+                    & .text2{
+                        & .overlay1 {
+                            transform: translateX(-100%);
+                        }
+                    }
+    
+                    &.show {
+                        & .text1 {
+                            color: $black;
+                            & .overlay1 {
+                                transform: translateX(200%);
+                            }
+                        }
+    
+                        & .text2 {
+                            color: $black;
+                            & .overlay1 {
+                                transform: translateX(200%);
+                            }
+                        }
+                    }
+                }
             }
         }
     }
