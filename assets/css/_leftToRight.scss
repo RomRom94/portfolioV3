@@ -91,7 +91,7 @@
                 & .text1{
                     position: relative;
                     color: transparent;
-                    transition-delay: 1s;
+                    transition-delay: 1.4s;
                     transition-duration: .1s;
 
                     & .overlay1 {
@@ -104,14 +104,16 @@
                         background-color: $black;
                         z-index: 3;
                         transition-delay: .2s;
-                        transition-duration: 4s;
+                        transition-duration: 3s;
+                        transition-timing-function: ease-in-out;
+
                     }
                 }
 
                 & .text2{
                     position: relative;
                     color: transparent;
-                    transition-delay: 1.4s;
+                    transition-delay: 1.8s;
                     transition-duration: .1s;
                     & .overlay1 {
                         position: absolute;
@@ -123,7 +125,9 @@
                         background-color: $black;
                         z-index: 3;
                         transition-delay: .3s;
-                        transition-duration: 4s;
+                        transition-duration: 3s;
+                        transition-timing-function: ease-in-out;
+
                     }
                 }
 
