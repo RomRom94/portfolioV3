@@ -1,6 +1,11 @@
 <header>
   <nav>
     <a href="/" class="logo"></a>
+    <button class="hamburger hamburger--stand" type="button">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
     <ul>
       <li>
         <a href="/" {% if (path(app.request.attributes.get('_route')) == '/') %}class="active"{% endif %}>About</a>

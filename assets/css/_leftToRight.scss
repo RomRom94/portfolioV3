@@ -67,6 +67,10 @@
                         transform: translateX(-100%);
                     }
                 }
+
+                @include breakpoint(tablet) {
+                    width: 100%;
+                }
             }
 
             & .text-animation {
@@ -86,6 +90,10 @@
                     text-align: center;
                     font-size: 2em;
                     line-height: 1.2;
+
+                    @include breakpoint(mobile) {
+                        font-size: 1.2em;
+                    }
                 }
 
                 & .text1{
@@ -151,7 +159,6 @@
 
         &:nth-of-type(2n) {
             right: 0;
-            transform: translateX(200px);
 
             & .diplome {
                 flex-direction: row-reverse;

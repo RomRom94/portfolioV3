@@ -1,6 +1,7 @@
 @import './fonts.scss';
 @import './variables.scss';
 @import './normalize.scss';
+@import './mixins.scss';
 
 @import './header';
 @import './homepage';
@@ -9,6 +10,8 @@
 @import './experience';
 @import './projects';
 @import './scroll';
+@import './burger';
+@import './mobileMenu';
 @import './slick';
 
 body {
@@ -31,6 +34,10 @@ body {
                   font-family: $ogg;
                   font-size: 4em;
                   font-weight: 400;
+
+                    @include breakpoint(mobile) {
+                        font-size: 2.5em;
+                    }
                 }
                 & h2 {
                     font-family: $ogg;
@@ -42,6 +49,10 @@ body {
                   font-size: 20px;
                   font-weight: 300;
                   line-height: 30px;
+
+                  @include breakpoint(mobile) {
+                    font-size: 16px;
+                    }
                 }
 
                 & a {
@@ -64,7 +75,22 @@ body {
                         }
                     }
                 }
+                @include breakpoint(mobile) {
+                    max-width: 100%;
+                }
             }
+
+            @include breakpoint(tablet) {
+                width: 70%;
+            }
+
+            @include breakpoint(mobile) {
+                width: 100%;
+            }
+        }
+
+        @include breakpoint(mobile) {
+            padding-top: 60px;
         }
     } 
 }

@@ -25,9 +25,23 @@
                 &.open {
                     -webkit-transform: translate(20px,-50%) rotate(-315deg);
                     transform: translate(20px,-50%) rotate(-315deg);
+
+                    @include breakpoint(mobile) {
+                        -webkit-transform: translate(10px,-50%) rotate(-315deg);
+                        transform: translate(10px,-50%) rotate(-315deg);
+                    }
+                }
+
+
+                @include breakpoint(mobile) {
+                    -webkit-transform: translate(10px,-50%) rotate(135deg);
+                    transform: translate(10px,-50%) rotate(135deg);
                 }
             }
-        }         
+        }
+        @include breakpoint(mobile) {
+            font-size: 1.2em;
+        }        
     }
 
     & h5 {
@@ -47,6 +61,10 @@
     & .tasks {
         list-style: inside;
         list-style-type: circle;
+
+        & li {
+            margin-bottom: 10px;
+        }
     }
 
     & .techs-and-tools {

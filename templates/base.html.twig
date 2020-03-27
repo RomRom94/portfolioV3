@@ -2,19 +2,21 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no">
         <title>{% block title %}Mon portolio{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
         <link rel="stylesheet" href="{{ asset('build/app.css') }}">
     </head>
     <body>
         <div class="page-container">
-        {% include './components/_header.html.twig' %}
-        {% include './components/_social.html.twig' %}
-        <section class="section-container">
-            {% block body %}{% endblock %}
-            {% block javascripts %}{% endblock %}
-        </section>
+            {% include './components/_header.html.twig' %}
+            {% include './components/_social.html.twig' %}
+            <section class="section-container">
+                {% block body %}{% endblock %}
+                {% block javascripts %}{% endblock %}
+            </section>
         </div>
+        {% include './components/_mobileMenu.html.twig' %}
         <script src="{{ asset('build/app.js') }}"></script>
     </body>
 </html>

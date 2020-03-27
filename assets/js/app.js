@@ -12,11 +12,29 @@ const slick = require('slick-carousel');
 
 $(document).ready(function() {
 
+    // BURGER MENU
+
+    $('.hamburger').on('click', function() {
+        if ($(this).hasClass('is-active')) {
+            $(this).removeClass('is-active');
+            $('.mobileMenu').removeClass('open')
+        } else {
+            $(this).addClass('is-active');
+            $('.mobileMenu').addClass('open')
+        }
+    })
+
+    $('.mobileMenu .overlay').on('click', function() {
+        if ($('.mobileMenu').hasClass('open')) {
+            $('.mobileMenu').removeClass('open')
+            $('.hamburger').removeClass('is-active')
+        }
+    })
+
     // SLIDER SECTION
     let slider = $(".projects-slider");
     let scrollCount = null;
     let scroll= null;
-    let paging = $('.pagination');
 
     slider
         .slick({
@@ -24,7 +42,23 @@ $(document).ready(function() {
             arrows: false,
             centerMode: true,
             slidesToShow: 3,
-            slidesToScroll: 1
+            slidesToScroll: 1,
+            responsive: [
+                {
+                  breakpoint: 1400,
+                  settings: {
+                    centerMode: true,
+                    slidesToShow: 2
+                  }
+                },
+                {
+                  breakpoint: 767,
+                  settings: {
+                    centerMode: false,
+                    slidesToShow: 1
+                  }
+                }
+            ]
         });
 
     slider.on('wheel', (function(e) {
@@ -64,7 +98,7 @@ $(document).ready(function() {
 
     // ON SCROLL ANIMATION PAGE CURSUS
 
-    if ($('.cursus')) {
+    if ($('.cursus').is(':visible')) {
         animate($('#1'))
         let pos2 = $("#2")
         let pos3 = $("#3")
