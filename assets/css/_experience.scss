@@ -40,7 +40,7 @@
             }
         }
         @include breakpoint(mobile) {
-            font-size: 1.2em;
+            font-size: 1.4em;
         }        
     }
 
@@ -64,7 +64,15 @@
 
         & li {
             margin-bottom: 10px;
+
+            @include breakpoint(mobile) {
+                margin-bottom: 20px;
+            }       
         }
+        @include breakpoint(mobile) {
+            list-style: circle;
+            padding-left: 20px;
+        }     
     }
 
     & .techs-and-tools {

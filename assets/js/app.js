@@ -17,17 +17,10 @@ $(document).ready(function() {
     $('.hamburger').on('click', function() {
         if ($(this).hasClass('is-active')) {
             $(this).removeClass('is-active');
-            $('.mobileMenu').removeClass('open')
+            $('.menu-list').removeClass('open')
         } else {
             $(this).addClass('is-active');
-            $('.mobileMenu').addClass('open')
-        }
-    })
-
-    $('.mobileMenu .overlay').on('click', function() {
-        if ($('.mobileMenu').hasClass('open')) {
-            $('.mobileMenu').removeClass('open')
-            $('.hamburger').removeClass('is-active')
+            $('.menu-list').addClass('open')
         }
     })
 
@@ -75,26 +68,6 @@ $(document).ready(function() {
             $(this).slick('slickPrev');
         }
     }));
-
-    // EXPERIENCE TO HIDE SECTION
-
-    $('.experience h4').each(function() {
-        let blockToHide = $(this).next('.to-hide');
-        let arrow = $(this).find('.arrow');
-        $(this).on('click', function() {
-            if (blockToHide.hasClass('hide')) {
-                arrow.addClass('open');
-                blockToHide.slideDown( 1000, function() {
-                    blockToHide.removeClass('hide');
-                });
-            } else {
-                arrow.removeClass('open');
-                blockToHide.slideUp( 1000, function() {
-                    blockToHide.addClass('hide');
-                });
-            }
-        })
-    })
 
     // ON SCROLL ANIMATION PAGE CURSUS
 

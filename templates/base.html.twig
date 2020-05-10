@@ -10,13 +10,12 @@
     <body>
         <div class="page-container">
             {% include './components/_header.html.twig' %}
-            {% include './components/_social.html.twig' %}
             <section class="section-container">
                 {% block body %}{% endblock %}
+                {% include './components/_social.html.twig' %}
                 {% block javascripts %}{% endblock %}
             </section>
         </div>
-        {% include './components/_mobileMenu.html.twig' %}
         <script src="{{ asset('build/app.js') }}"></script>
     </body>
 </html>

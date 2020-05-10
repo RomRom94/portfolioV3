@@ -30,10 +30,11 @@ header {
         transform: inherit;
       }
     }
-    ul {
+    & .menu-list {
       display: inline-flex;
       align-items: center;
       height: 100%;
+      transition: all .5s cubic-bezier(.6,0,.4,.8);
 
       & li {
         margin-right: 30px;
@@ -55,6 +56,9 @@ header {
 
           &.active {
             font-weight: bold;
+            &:after {
+              width: 100%;
+            }
           }
 
           &:hover{
@@ -63,10 +67,25 @@ header {
             }
           }
         }
+        @include breakpoint(mobile) {
+          margin-bottom: 30px;
+        }
+      }
+
+      &.open {
+        transform: translateX(0);
       }
 
       @include breakpoint(mobile) {
-        display: none;
+        position: fixed;
+        top: 81px;
+        left: 0;
+        width: 100%;
+        height: calc( 100% - 81px);
+        transform: translateX(-100%);
+        background-color: $white;
+        flex-direction: column;
+        justify-content: center;
       }
     }
     @include breakpoint(mobile) {
@@ -82,7 +101,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    border-top: solid 1px $black;
+    z-index: 20;
     border-bottom: solid 1px $black;
   }
 }

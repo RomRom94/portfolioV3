@@ -6,6 +6,10 @@
 
     .slick-slider {
         margin:0 -15px;
+
+        @include breakpoint(mobile) {
+            margin: 0;
+        }
     }
     .slick-slide {
         padding:10px;
